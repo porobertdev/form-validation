@@ -2,11 +2,15 @@
 
 import Input from '../input';
 
-export const email = Input({
+const props = {
     label: {
         id: 'email',
         text: 'Email Address:',
     },
     type: 'email',
     placeholder: 'Enter your email address',
-});
+};
+
+const element = Input(props);
+
+export { props, element };

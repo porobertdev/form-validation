@@ -2,11 +2,11 @@ import Input from '../input';
 
 const props = {
     label: {
-        id: 'password',
-        text: 'Password:',
+        id: 'password-confirmation',
+        text: 'Confirm Password:',
     },
     type: 'password',
-    placeholder: 'Enter your password',
+    // placeholder: 'Enter your password',
 };
 
 const element = Input(props);

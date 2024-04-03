@@ -1,11 +1,16 @@
 import { html } from '@github/jtml';
-import { email } from './formControls/email';
-import { password, confirmPassword } from './formControls/password';
+// import { email } from './formControls/email';
+import {
+    email,
+    password,
+    confirmPassword,
+    zipcode,
+} from './formControls/barrel';
 import Country from './formControls/country';
-import { zipcode } from './formControls/zipcode';
 
 export default function Form() {
     return html` <form action="" method="post" class="form-container">
-        ${email} ${password} ${confirmPassword} ${Country()} ${zipcode}
+        ${email.element} ${password.element} ${confirmPassword.element}
+        ${Country()} ${zipcode.element}
     </form>`;
 }
