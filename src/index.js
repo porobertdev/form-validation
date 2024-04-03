@@ -2,6 +2,7 @@ import { render } from '@github/jtml';
 import Form from './components/form';
 import * as formControls from './components/formControls/barrel';
 import checkAttributes from './utils/checkAttributes';
+import './css/style.css';
 
 render(Form(), document.body);
 
