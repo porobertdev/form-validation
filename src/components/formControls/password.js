@@ -7,6 +7,10 @@ const props = {
     },
     type: 'password',
     placeholder: 'Enter your password',
+    attributes: {
+        minLength: 8,
+        maxLength: 32,
+    },
 };
 
 const element = Input(props);
