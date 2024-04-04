@@ -11,6 +11,7 @@ const props = {
         minLength: 8,
         maxLength: 32,
     },
+    required: true,
 };
 
 const element = Input(props);
