@@ -9,8 +9,9 @@ import {
 import Country from './formControls/country';
 
 export default function Form() {
-    return html` <form action="" method="post" class="form-container">
+    return html` <form class="form-container">
         ${email.element} ${password.element} ${confirmPassword.element}
         ${Country()} ${zipcode.element}
+        <button>Submit</button>
     </form>`;
 }
