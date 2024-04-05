@@ -7,6 +7,7 @@ const props = {
         text: 'Zip Code:',
     },
     type: 'text',
+    required: true,
 };
 
 const element = Input(props);

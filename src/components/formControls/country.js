@@ -17,7 +17,7 @@ const option = (value) =>
 export default function Country() {
     return html`
         ${Label('country', 'Country:')}
-        <select name="country" id="country">
+        <select name="country" id="country" required>
             <option value="">--Please choose an option--</option>
             ${COUNTRY_ADDRESS_POSTALS.map((country) => option(country.name))}
         </select

@@ -9,6 +9,7 @@ const props = {
     },
     type: 'email',
     placeholder: 'Enter your email address',
+    required: true,
 };
 
 const element = Input(props);
