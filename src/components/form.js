@@ -10,8 +10,13 @@ import Country from './formControls/country';
 
 export default function Form() {
     return html` <form class="form-container">
-        ${email.element} ${password.element} ${confirmPassword.element}
-        ${Country()} ${zipcode.element}
+        <div>${email.element}</div>
+        <div>${password.element}</div>
+        <div>${confirmPassword.element}</div>
+        <div class="country-zip">
+            <div>${Country()}</div>
+            <div>${zipcode.element}</div>
+        </div>
         <button>Submit</button>
     </form>`;
 }

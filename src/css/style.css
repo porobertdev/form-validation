@@ -1,7 +1,87 @@
+@import url('./fonts.css');
+@import url('./reset.css');
+
+:root {
+    /* colors */
+    --clr-bkg: #2d303f;
+    --clr-label: #c8c8c8;
+    --clr-invalid: #ff0000;
+    --clr-valid: #93a5e8;
+    --clr-input: #3a3e4e;
+    --clr-cta: #6d7ebe;
+
+    /* padding */
+    --pd-cta: 0.5rem;
+}
+
+body {
+    background-color: var(--clr-bkg);
+    font-family: 'Lato', sans-serif;
+}
+
+form {
+    /* center form on the page */
+    width: 20%;
+    margin: 5rem auto;
+
+    /* flex */
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    color: white;
+
+    /* childs */
+    div {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    label {
+        color: var(--clr-label);
+    }
+
+    input {
+        background-color: var(--clr-input);
+        color: white;
+        padding: 0.6rem;
+        padding-left: 0.5rem;
+    }
+
+    .country-zip {
+        flex-direction: row;
+        gap: 0;
+
+        select {
+            width: 10%;
+        }
+
+        #zipCode {
+            width: 100%;
+        }
+    }
+
+    button {
+        background-color: var(--clr-cta);
+        color: white;
+        padding: var(--pd-cta);
+
+        &:hover {
+            background-color: var(--clr-valid);
+        }
+    }
+
+    input,
+    button {
+        border-radius: 8px;
+    }
+}
+
 input.invalid {
-    background-color: red;
+    border: 2px solid var(--clr-invalid);
 }
 
 input.valid {
-    background-color: green;
+    border: 2px solid var(--clr-valid);
 }

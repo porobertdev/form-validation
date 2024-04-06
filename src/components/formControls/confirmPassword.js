@@ -8,7 +8,7 @@ const props = {
         text: 'Confirm Password:',
     },
     type: 'password',
-    // placeholder: 'Enter your password',
+    placeholder: 'Retype your password',
     attributes: {
         minLength: 8,
         maxLength: 32,
