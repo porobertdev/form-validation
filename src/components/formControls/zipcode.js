@@ -1,5 +1,8 @@
 /* eslint-disable import/prefer-default-export */
+import { COUNTRY_ADDRESS_POSTALS } from '../../constants/countries';
 import Input from '../input';
+import rejectInput from '../validator/rejectInput';
+import validateInput from '../validator/validateInput';
 
 const props = {
     label: {
@@ -8,6 +11,37 @@ const props = {
     },
     type: 'text',
     required: true,
+    customValidation: {
+        validate() {
+            const dropdown = document.getElementById('country');
+
+            // -1 because index 0 is the "please select an option" in the dropdown
+            const index = dropdown.selectedIndex - 1;
+
+            if (index === -1) {
+                rejectInput(this, 'You need to select a country first.');
+                return;
+            }
+
+            const regex = COUNTRY_ADDRESS_POSTALS[index].postal;
+
+            console.log(regex);
+            console.log(this.value);
+
+            // guard against countries that don't have a postal regex
+            if (regex) {
+                // if value pass the regex
+                if (regex.test(this.value)) {
+                    validateInput(this);
+                } else {
+                    rejectInput(
+                        this,
+                        `Invalid zip code! Pattern must be: ${regex}`
+                    );
+                }
+            }
+        },
+    },
 };
 
 const element = Input(props);
