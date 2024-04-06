@@ -1,4 +1,6 @@
 import Input from '../input';
+import rejectInput from '../validator/rejectInput';
+import validateInput from '../validator/validateInput';
 
 const props = {
     label: {
@@ -12,6 +14,17 @@ const props = {
         maxLength: 32,
     },
     required: true,
+    customValidation: {
+        validate() {
+            const password = document.getElementById('password');
+
+            if (this.value !== password.value) {
+                rejectInput(this, "Passwords don't match!");
+            } else {
+                validateInput(this);
+            }
+        },
+    },
 };
 
 const element = Input(props);

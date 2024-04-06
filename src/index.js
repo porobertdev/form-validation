@@ -4,6 +4,7 @@ import * as formControls from './components/formControls/barrel';
 import checkAttributes from './utils/checkAttributes';
 import './css/style.css';
 import checkRequired from './utils/checkRequired';
+import checkConstraints from './utils/checkConstraints';
 
 render(Form(), document.body);
 
@@ -18,4 +19,6 @@ Object.keys(formControls).forEach((element) => {
 
     // Check if it's required. Can't be done with JTML due expression limitations
     checkRequired(config);
+
+    checkConstraints(config);
 });
