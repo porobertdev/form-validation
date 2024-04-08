@@ -13,15 +13,19 @@ const props = {
     required: true,
     customValidation: {
         validate() {
-            const dropdown = document.getElementById('country');
+            const dropdown = document.querySelector(
+                '#dropdown > span.placeholder'
+            );
 
-            // -1 because index 0 is the "please select an option" in the dropdown
-            const index = dropdown.selectedIndex - 1;
-
-            if (index === -1) {
+            if (dropdown.textContent === 'Choose') {
                 rejectInput(this, 'You need to select a country first.');
                 return;
             }
+
+            // find index of selected country
+            const index = COUNTRY_ADDRESS_POSTALS.findIndex(
+                (country) => country.name === dropdown.textContent
+            );
 
             const regex = COUNTRY_ADDRESS_POSTALS[index].postal;
 
