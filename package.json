@@ -22,6 +22,7 @@
   },
   "dependencies": {
     "@github/jtml": "^0.5.1",
-    "jtml": "^0.0.1-development"
+    "jtml": "^0.0.1-development",
+    "my-components": "github:porobertdev/components"
   }
 }
