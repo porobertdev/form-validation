@@ -10,6 +10,9 @@ import { CustomCountry } from './formControls/country';
 
 export default function Form() {
     return html` <form class="form-container">
+        <header>
+            <h1>Create an account for <span class="highlight">free</span>.</h1>
+        </header>
         <div class="email">${email.element}</div>
         <div class="password">${password.element}</div>
         <div class="password-confirmation">${confirmPassword.element}</div>

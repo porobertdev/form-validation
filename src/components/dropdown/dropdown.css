@@ -13,9 +13,10 @@ div.dropdown-component {
         padding-left: 0.5rem;
     }
 
+    #dropdown::after,
     span.placeholder {
         color: var(--clr-label);
-        font-size: 0.8rem;
+        font-size: var(--fs-placeholder);
         opacity: 50%;
     }
 }

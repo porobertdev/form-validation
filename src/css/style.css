@@ -14,11 +14,26 @@
     /* padding */
     --pd-cta: 0.5rem;
     --pd-input: 0.6rem;
+
+    /* font sizes */
+    --fs-placeholder: 0.75rem;
 }
 
 body {
     background-color: var(--clr-bkg);
     font-family: 'Lato', sans-serif;
+}
+
+h1 {
+    /* color: white; */
+    /* width: max-content; */
+    /* text-align: center; */
+    /* margin: 0 auto; */
+    margin-bottom: 1rem;
+
+    span.highlight {
+        color: var(--clr-valid);
+    }
 }
 
 form {
@@ -49,6 +64,10 @@ form {
         color: white;
         padding: var(--pd-input);
         padding-left: 0.5rem;
+    }
+
+    input::placeholder {
+        font-size: var(--fs-placeholder);
     }
 
     .country-zip {
