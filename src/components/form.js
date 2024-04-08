@@ -6,16 +6,16 @@ import {
     confirmPassword,
     zipcode,
 } from './formControls/barrel';
-import Country from './formControls/country';
+import { CustomCountry } from './formControls/country';
 
 export default function Form() {
     return html` <form class="form-container">
-        <div>${email.element}</div>
-        <div>${password.element}</div>
-        <div>${confirmPassword.element}</div>
+        <div class="email">${email.element}</div>
+        <div class="password">${password.element}</div>
+        <div class="password-confirmation">${confirmPassword.element}</div>
         <div class="country-zip">
-            <div>${Country()}</div>
-            <div>${zipcode.element}</div>
+            ${CustomCountry()}
+            <div class="zipcode">${zipcode.element}</div>
         </div>
         <button>Submit</button>
     </form>`;

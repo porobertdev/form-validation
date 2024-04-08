@@ -1,0 +1,32 @@
+div.dropdown-component {
+    display: flex;
+    text-align: left;
+
+    position: relative;
+
+    div#dropdown {
+        border-radius: 8px;
+        background-color: var(--clr-input);
+        flex-direction: row;
+        justify-content: center;
+        padding: var(--pd-input);
+        padding-left: 0.5rem;
+    }
+
+    span.placeholder {
+        color: var(--clr-label);
+        font-size: 0.8rem;
+        opacity: 50%;
+    }
+}
+
+ul.options {
+    background-color: var(--clr-input);
+    position: absolute;
+    top: 100%;
+    width: inherit;
+
+    li:hover {
+        background-color: var(--clr-valid);
+    }
+}

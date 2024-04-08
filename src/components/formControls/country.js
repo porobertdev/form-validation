@@ -1,4 +1,5 @@
 import { html } from '@github/jtml';
+import { Dropdown } from 'my-components/src';
 import Label from './label';
 import { COUNTRY_ADDRESS_POSTALS } from '../../constants/countries';
 
@@ -11,10 +12,18 @@ import { COUNTRY_ADDRESS_POSTALS } from '../../constants/countries';
 //     placeholder: 'Choose your country',
 // });
 
-const option = (value) =>
-    html`<option value="${value.toLowerCase()}">${value}</option>`;
+export function CustomCountry() {
+    const options = COUNTRY_ADDRESS_POSTALS.map((country) => country.name);
 
-export default function Country() {
+    return Dropdown({ options, label: 'Country' });
+}
+
+export function Country() {
+    // HTML inbuilt dropdown
+
+    const option = (value) =>
+        html`<option value="${value.toLowerCase()}">${value}</option>`;
+
     return html`
         ${Label('country', 'Country:')}
         <select name="country" id="country" required>

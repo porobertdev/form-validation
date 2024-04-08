@@ -1,5 +1,6 @@
 @import url('./fonts.css');
 @import url('./reset.css');
+@import url('../components//dropdown//dropdown.css');
 
 :root {
     /* colors */
@@ -12,6 +13,7 @@
 
     /* padding */
     --pd-cta: 0.5rem;
+    --pd-input: 0.6rem;
 }
 
 body {
@@ -45,20 +47,20 @@ form {
     input {
         background-color: var(--clr-input);
         color: white;
-        padding: 0.6rem;
+        padding: var(--pd-input);
         padding-left: 0.5rem;
     }
 
     .country-zip {
         flex-direction: row;
-        gap: 0;
+        justify-content: space-between;
 
         select {
             width: 10%;
         }
 
-        #zipCode {
-            width: 100%;
+        div.zipcode {
+            width: 40%;
         }
     }
 
