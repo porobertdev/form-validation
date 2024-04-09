@@ -18,7 +18,8 @@
   },
   "scripts": {
     "start": "webpack serve --open --config webpack.dev.js",
-    "build": "webpack --config webpack.prod.js"
+    "build": "webpack --config webpack.prod.js",
+    "ghpages": "git subtree push --prefix dist origin gh-pages"
   },
   "dependencies": {
     "@github/jtml": "^0.5.1",
